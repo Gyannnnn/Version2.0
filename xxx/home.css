@@ -1,0 +1,468 @@
+/* Reset margins and paddings */
+@font-face {
+  font-family: tungstenBold;
+  src: url(./Assets/Fonts/Tungsten-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navigation bar styling */
+nav {
+  width: 100vw;
+  height: 80px;
+  background: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 0 20px;
+}
+
+.colored-logo {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  -webkit-mask: url("./Assets/logo.png") no-repeat center;
+  mask: url("./Assets/logo.png") no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: background-color 0.3s ease;
+}
+
+.colored-logo:hover {
+  background-color: #ff4655;
+}
+
+.anchor-div {
+  display: flex;
+  gap: 50px;
+}
+
+.nav-ancors {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+
+.nav-ancors:hover {
+  background: #333333;
+  border-radius: 10px;
+  text-decoration: underline;
+  text-decoration-color: orangered;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+#about-us {
+  padding: 10px 20px;
+  background: #ff4655;
+  border-radius: 50px;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+#about-us:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Home section styling */
+#home {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-video-div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#home video {
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.home-buttons a {
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #ff4655;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-weight: bolder;
+}
+
+.home-buttons a:hover {
+  background: white;
+  color: black;
+}
+
+.home-buttons img {
+  height: 100px;
+}
+
+/* Agents page styling */
+#agents {
+  height: 100vh;
+  width: 100vw;
+  background: #ff4655;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agents-main {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.agent-img {
+  width: 50vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agent-img img {
+  width: 35vw;
+  filter: drop-shadow(20px 20px 100px white);
+}
+
+.agent-info {
+  width: 50vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.agent-info a {
+  text-decoration: none;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 1px solid black;
+  transition: all ease-in-out;
+}
+
+.agent-info p {
+  color: white;
+  font-size: 1rem;
+  text-align: left;
+  width: 40vw;
+}
+
+.agent-info a:hover {
+  background: white;
+  color: black;
+}
+
+#agents-heading {
+  font-size: 10vw;
+  font-family: tungstenBold;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Guns page styling */
+#guns {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.guns-main {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gun-img {
+  height: 80vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gun-img img {
+  width: 35vw;
+  filter: drop-shadow(20px 20px 40px #000);
+}
+
+.gun-info {
+  width: 50vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+
+.gun-info h1 {
+  font-family: tungstenBold;
+  font-size: 10vw;
+  text-transform: uppercase;
+}
+
+.gun-info p {
+  width: 40vw;
+}
+
+.gun-info a {
+  text-decoration: none;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  transition: all ease-in-out;
+}
+
+.gun-info a:hover {
+  background: white;
+  color: black;
+}
+
+/* FOOTER SECTION CSS 👇 */
+footer {
+  height: 40vh;
+  width: 100vw;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.icons {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons a {
+  text-decoration: none;
+  color: white;
+  z-index: 10;
+}
+
+.icons .fa-brands {
+  background: grey;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px white;
+  font-size: 1.2rem;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logos h1 {
+  padding-left: 10px;
+  font-size: 4rem;
+}
+
+.logos img {
+  width: 200px;
+  z-index: 1;
+}
+
+#loader {
+  height: 100vh;
+  width: 100vw;
+  background: #000 url(./Assets/loader.webp) no-repeat center center;
+  background-size: 8%;
+  position: fixed;
+  z-index: 1000;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .anchor-div {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background: #111111;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    left: 0;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .anchor-div.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+@media (max-width:1436px){
+  .gun-img img{
+    width: 500px;
+  }
+  .agent-img img{
+    width: 500px;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+  .guns-main {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .gun-img {
+    height: 40vh;
+    width: 100vw;
+    align-items: center;
+  }
+  .gun-info{
+    height: 40vh;
+    width: 100vw;
+    align-items: center;
+
+  }
+  .agents-main{
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+  }
+  .agent-img{
+    width: 100vw;
+    height: 50vh;
+  }
+  .agent-img img{
+    width: 400px;
+  }
+  .agent-info{
+    width: 100vw;
+    height: 50vh;
+    align-items: center;
+  }
+ 
+}
+
+@media (max-width:768px){
+  .gun-img img{
+    width: 400px;
+
+  }
+  .gun-info p{
+    width: 90vw;
+  }
+  .agent-info p{
+    width: 90vw;
+  }
+
+}
+
+
+@media (max-width:768px){
+  footer .logos img{
+    width: 150px;
+
+  }
+
+}
+
+
+@media (max-width:570px){
+  #home .home-buttons img{
+    height: 71px;
+  }
+}
